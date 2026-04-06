@@ -35,5 +35,5 @@ const projetos = [
     }
 ];
 
-
-export default projects;
+// O nome aqui deve ser EXATAMENTE igual ao nome da variável lá em cima
+export default projetos;
