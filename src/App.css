@@ -1,0 +1,158 @@
+/* ============================================
+   App.css — Estilos globais (Versão Light)
+   Paleta: Branco / Azul Royal / Slate
+   ============================================ */
+
+@import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;600&family=Inter:wght@300;400;500;600;700;800&display=swap');
+
+/* Reset e Base */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  /* Fundo claro e limpo */
+  background: #f8fafc; 
+  color: #334155;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+/* ============================================
+   Hero Section
+   ============================================ */
+.hero {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  padding: 2rem;
+  /* Gradiente radial muito sutil para dar profundidade */
+  background: radial-gradient(circle at 50% -20%, #e2e8f0 0%, #f8fafc 80%);
+}
+
+/* Removi o hero::before antigo para limpar o visual */
+
+.heroContent {
+  position: relative;
+  z-index: 1;
+  max-width: 750px;
+}
+
+.heroGreeting {
+  font-size: 1rem;
+  /* Azul Royal em vez de Roxo */
+  color: #2563eb; 
+  font-weight: 600;
+  margin-bottom: 1rem;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+}
+
+.heroName {
+  font-size: clamp(2.5rem, 8vw, 4rem);
+  font-weight: 800;
+  line-height: 1.1;
+  margin-bottom: 1.5rem;
+  /* Texto escuro sólido para seriedade empresarial */
+  color: #0f172a; 
+}
+
+.heroTitle {
+  font-size: 1.15rem;
+  color: #64748b;
+  line-height: 1.7;
+  max-width: 600px;
+  margin: 0 auto 2.5rem;
+}
+
+/* Typing effect cursor */
+.cursor {
+  display: inline-block;
+  width: 2.5px;
+  height: 1.1em;
+  background: #2563eb;
+  margin-left: 2px;
+  vertical-align: text-bottom;
+  animation: blink 1s step-end infinite;
+}
+
+@keyframes blink {
+  50% { opacity: 0; }
+}
+
+/* Scroll indicator */
+.scrollIndicator {
+  position: absolute;
+  bottom: 2.5rem;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  color: #94a3b8;
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.scrollArrow {
+  width: 12px;
+  height: 12px;
+  border-right: 2px solid #cbd5e1;
+  border-bottom: 2px solid #cbd5e1;
+  transform: rotate(45deg);
+}
+
+/* Botão CTA hero (Estilo Enterprise) */
+.heroCta {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  background: #2563eb;
+  color: #fff;
+  padding: 0.9rem 2.2rem;
+  border-radius: 8px; /* Bordas menos arredondadas = mais corporativo */
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1rem;
+  transition: all 0.2s ease;
+  box-shadow: 0 4px 12px rgba(37, 99, 235, 0.2);
+}
+
+.heroCta:hover {
+  background: #1d4ed8;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(37, 99, 235, 0.3);
+}
+
+/* Removi as partículas (rise animation) para manter o site "light" e limpo */
+.particles {
+  display: none;
+}
+
+/* ============================================
+   Responsividade Global
+   ============================================ */
+@media (max-width: 768px) {
+  .heroName {
+    font-size: 2.5rem;
+  }
+  .heroTitle {
+    font-size: 1.05rem;
+  }
+}
