@@ -99,12 +99,14 @@ function App() {
             {displayText}
             <span className="cursor"></span>
           </p>
+          <div className="heroButtons">
           <a href="#projetos" className="heroCta">
-            Ver Projetos ↓
+            Ver Projetos
           </a>
           <a href="#contato" className="heroCta">
             Contato
           </a>
+          </div>
         </div>
 
         <div className="scrollIndicator">

@@ -156,3 +156,16 @@ body {
     font-size: 1.05rem;
   }
 }
+.heroButtons {
+  display: flex;
+  gap: 20px;           /* O espaço mágico entre os botões */
+  justify-content: center; /* Centraliza os botões */
+  margin-top: 30px;    /* Afasta os botões do texto acima */
+}
+@media (max-width: 480px) {
+  .heroButtons {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+}
